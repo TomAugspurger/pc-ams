@@ -46,16 +46,16 @@ jupyterhub:
     storage:
       capacity: "15Gi"
 
-    defaultUrl: "/lab/tree/pc-cng-outreach-2022/introduction.ipynb"
+    defaultUrl: "/lab/tree/pc-ams/introduction.ipynb"
     lifecycleHooks:
       postStart:
         exec:
           command:
             [
               "/srv/conda/envs/notebook/bin/gitpuller",
-              "https://github.com/TomAugspurger/pc-cng-outreach-2022",
+              "https://github.com/TomAugspurger/pc-ams",
               "main",
-              "pc-cng-outreach-2022",
+              "pc-ams",
             ]
 
     extraEnv:
